@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "autostart": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "swagger": "node ./swagger.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,9 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
-    "firebase-admin": "^12.2.0"
+    "firebase-admin": "^12.2.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "dotenv": "^16.4.5",

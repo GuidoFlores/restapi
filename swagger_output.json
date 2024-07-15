@@ -43,26 +43,14 @@
         "tags": [
           "Items"
         ],
-        "summary": "Get an item entry",
-        "description": "Get an item entry",
-        "parameters": [
-          {
-            "name": "id",
-            "description": "Item id",
-            "required": true,
-            "in": "query",
-            "type": "string"
-          }
-        ],
+        "summary": "Get all items entries",
+        "description": "Get all items entries",
         "responses": {
           "200": {
-            "description": "Get an item by id"
+            "description": "Items entries successfully obtained"
           },
           "400": {
             "description": "Bad request"
-          },
-          "404": {
-            "description": "Item not found"
           }
         }
       }
@@ -96,13 +84,28 @@
         }
       },
       "put": {
+        "tags": [
+          "Items"
+        ],
+        "summary": "",
         "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "data",
+            "in": "body",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
           }
         ],
         "responses": {
@@ -115,13 +118,18 @@
         }
       },
       "delete": {
+        "tags": [
+          "Items"
+        ],
+        "summary": "",
         "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": ""
           }
         ],
         "responses": {

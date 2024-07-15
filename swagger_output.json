@@ -8,7 +8,7 @@
   "host": "restapi-6a51.onrender.com",
   "basePath": "/api",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/items": {

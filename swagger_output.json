@@ -5,7 +5,7 @@
     "description": "REST API with Express and Firestore",
     "version": "1.0.0"
   },
-  "host": "localhost:5500",
+  "host": "restapi-6a51.onrender.com",
   "basePath": "/api",
   "schemes": [
     "http"
@@ -36,6 +36,33 @@
           },
           "400": {
             "description": "Bad request"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Items"
+        ],
+        "summary": "Get an item entry",
+        "description": "Get an item entry",
+        "parameters": [
+          {
+            "name": "id",
+            "description": "Item id",
+            "required": true,
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get an item by id"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "404": {
+            "description": "Item not found"
           }
         }
       }

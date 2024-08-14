@@ -162,6 +162,11 @@
             "required": true,
             "in": "query",
             "type": "string"
+          },
+          {
+            "name": "token",
+            "in": "header",
+            "type": "string"
           }
         ],
         "responses": {
@@ -173,6 +178,9 @@
           },
           "404": {
             "description": "Item not found"
+          },
+          "408": {
+            "description": "Request Timeout due to invalid token"
           }
         }
       }

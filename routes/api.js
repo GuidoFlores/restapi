@@ -7,7 +7,7 @@ router.get('/items', itemController.getAllItems);
 router.get('/items/:id', itemController.getItem);
 
 //
-router.get('/items/:token', itemController.getItem)
+router.get('/items/:token', itemController.verifyToken)
 
 router.put('/items/:id', itemController.updateItem);
 router.delete('/items/:id', itemController.deleteItem);

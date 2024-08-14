@@ -141,6 +141,41 @@
           }
         }
       }
+    },
+    "/items/{token}": {
+      "get": {
+        "tags": [
+          "Items"
+        ],
+        "summary": "Get an item entry",
+        "description": "Get an item entry",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "description": "Item id",
+            "required": true,
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get an item by id"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "404": {
+            "description": "Item not found"
+          }
+        }
+      }
     }
   }
 }

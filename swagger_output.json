@@ -147,21 +147,15 @@
         "tags": [
           "Items"
         ],
-        "summary": "Get an item entry",
-        "description": "Get an item entry",
+        "summary": "Get an item entry by token",
+        "description": "Get an item by token",
         "parameters": [
           {
             "name": "token",
             "in": "path",
             "required": true,
-            "type": "string"
-          },
-          {
-            "name": "id",
-            "description": "Item id",
-            "required": true,
-            "in": "query",
-            "type": "string"
+            "type": "string",
+            "description": "token"
           },
           {
             "name": "token",

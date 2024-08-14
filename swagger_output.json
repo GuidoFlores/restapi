@@ -154,11 +154,10 @@
             "name": "token",
             "in": "path",
             "required": true,
-            "type": "string",
-            "description": "token"
+            "type": "string"
           },
           {
-            "name": "authorization",
+            "name": "token",
             "in": "header",
             "type": "string"
           }

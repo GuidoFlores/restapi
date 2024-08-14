@@ -152,13 +152,16 @@
         "parameters": [
           {
             "name": "token",
-            "in": "path",
+            "in": "header",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "token"
           },
           {
-            "name": "token",
-            "in": "header",
+            "name": "id",
+            "description": "Item id",
+            "required": true,
+            "in": "path",
             "type": "string"
           }
         ],

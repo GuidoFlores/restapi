@@ -151,7 +151,7 @@
         "description": "Get an item by token",
         "parameters": [
           {
-            "name": "id",
+            "name": "token",
             "in": "path",
             "required": true,
             "type": "string"
@@ -159,9 +159,7 @@
           {
             "name": "token",
             "in": "header",
-            "required": true,
             "type": "string"
-            
           }
         ],
         "responses": {

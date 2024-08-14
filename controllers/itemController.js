@@ -27,6 +27,7 @@ exports.verifyToken = async (req, res) => {
     */
 
     try {
+        const itemId = req.params.id;
         // Obtener el token del encabezado de autorización
         const token = req.headers['token'];  // Cambié aquí para usar 'token' en lugar de 'authorization'
 
@@ -41,7 +42,7 @@ exports.verifyToken = async (req, res) => {
             }
 
             // Token válido, continuar con la obtención del ítem
-            const itemId = req.params.id;
+            
             db.collection('items').doc(itemId).get()
                 .then((itemDoc) => {
                     if (!itemDoc.exists) {

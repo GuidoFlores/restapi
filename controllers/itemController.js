@@ -12,8 +12,8 @@ exports.verifyToken = async (req, res) => {
       #swagger.tags = ['Items']
       #swagger.description = 'Get an item by token'
       #swagger.summary = 'Get an item entry by token'
-      #swagger.parameters['token'] = {
-          description: 'token',
+      #swagger.parameters['id'] = {
+          description: 'id',
           required: true,
       }
       #swagger.responses[404] = {

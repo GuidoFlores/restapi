@@ -151,14 +151,14 @@
         "description": "Get an item by token",
         "parameters": [
           {
-            "name": "id",
+            "name": "token",
             "in": "path",
             "required": true,
             "type": "string",
             "description": "token"
           },
           {
-            "name": "token",
+            "name": "authorization",
             "in": "header",
             "type": "string"
           }

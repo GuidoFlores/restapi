@@ -11,41 +11,26 @@
     "https"
   ],
   "paths": {
-    "/items/{id}/": {
+    "/api/items/{id}": {
       "get": {
-        "tags": [
-          "Items"
-        ],
-        "summary": "Get an item entry by token",
-        "description": "Get an item by token",
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string",
-            "description": "Item id"
-          },
-          {
-            "name": "token",
-            "description": "token",
-            "required": true,
-            "in": "header",
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "Get an item by id"
+            "description": "OK"
           },
           "400": {
-            "description": "Bad request"
+            "description": "Bad Request"
           },
           "404": {
-            "description": "Item not found"
-          },
-          "408": {
-            "description": "Request Timeout due to invalid token"
+            "description": "Not Found"
           }
         }
       }

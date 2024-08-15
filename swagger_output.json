@@ -11,7 +11,7 @@
     "https"
   ],
   "paths": {
-    "/items/{token}": {
+    "/items/{id}/{token}": {
       "get": {
         "tags": [
           "Items"
@@ -28,10 +28,10 @@
           },
           {
             "name": "token",
-            "description": "Token",
-            "required": true,
             "in": "header",
-            "type": "string"
+            "required": true,
+            "type": "string",
+            "description": "token"
           }
         ],
         "responses": {

@@ -24,6 +24,7 @@ exports.verifyToken = async (req, res) => {
           in: 'header',
           type: 'string'
       }
+          
       #swagger.responses[404] = {
           description: 'Item not found',
       }

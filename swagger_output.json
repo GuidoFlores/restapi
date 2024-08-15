@@ -11,7 +11,7 @@
     "https"
   ],
   "paths": {
-    "/api/items": {
+    "/items": {
       "post": {
         "tags": [
           "Items"
@@ -73,7 +73,7 @@
         }
       }
     },
-    "/api/items/{id}": {
+    "/items/{id}": {
       "get": {
         "tags": [
           "Items"

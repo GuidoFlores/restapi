@@ -11,31 +11,7 @@
     "https"
   ],
   "paths": {
-    "/api/items/{id}": {
-      "get": {
-        "description": "",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "404": {
-            "description": "Not Found"
-          }
-        }
-      }
-    },
-    "/items": {
+    "/api/items": {
       "post": {
         "tags": [
           "Items"
@@ -79,7 +55,7 @@
         }
       }
     },
-    "/items/{id}": {
+    "/api/items/{id}": {
       "get": {
         "tags": [
           "Items"

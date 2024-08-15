@@ -1,11 +1,10 @@
 const jwt = require('jsonwebtoken');
 
-SECRET_KEY = 'shhhhhhhhhhhh'
-
+SECRET_KEY = 'shhhhhhhhh'
 // Middleware para verificar el token JWT
 const verifyToken = (req, res, next) => {
     // Obtener el token del encabezado de autorización
-    const token = req.headers['authorization'];
+    const token = req.headers['token'];
 
     // Verificar si el token existe
     if (!token) {
@@ -13,7 +12,7 @@ const verifyToken = (req, res, next) => {
     }
 
     // Verificar la validez del token
-    jwt.verify(token,SECRET_KEY, (err, decoded) => {
+    jwt.verify(token, SECRET_KEY, (err, decoded) => {
         if (err) {
             return res.status(408).json({ error: 'Token inválido o expirado' });
         }

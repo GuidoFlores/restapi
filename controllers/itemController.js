@@ -12,19 +12,18 @@ exports.verifyToken = async (req, res) => {
       #swagger.tags = ['Items']
       #swagger.description = 'Get an item by token'
       #swagger.summary = 'Get an item entry by token'
-      #swagger.parameters['token'] = {
-          description: 'token',
-          required: true,
-          in: 'header',
-          type: 'string'
-      }
       #swagger.parameters['id'] = {
           description: 'Item id',
           required: true,
           in: 'path',
           type: 'string'
       }
-      
+      #swagger.parameters['token'] = {
+          description: 'token',
+          required: true,
+          in: 'header',
+          type: 'string'
+      }
       #swagger.responses[404] = {
           description: 'Item not found',
       }
@@ -40,7 +39,7 @@ exports.verifyToken = async (req, res) => {
     */
 
     try {
-        const itemId = req.params.id;
+        
         // Obtener el token del encabezado de autorización
         const token = req.headers['token'];  // Cambié aquí para usar 'token' en lugar de 'authorization'
 
@@ -55,7 +54,7 @@ exports.verifyToken = async (req, res) => {
             }
 
             // Token válido, continuar con la obtención del ítem
-            
+            const itemId = req.params.id;
             db.collection('items').doc(itemId).get()
                 .then((itemDoc) => {
                     if (!itemDoc.exists) {

@@ -11,6 +11,45 @@
     "https"
   ],
   "paths": {
+    "/items/{token}": {
+      "get": {
+        "tags": [
+          "Items"
+        ],
+        "summary": "Get an item entry by token",
+        "description": "Get an item by token",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Item id"
+          },
+          {
+            "name": "token",
+            "description": "Token",
+            "required": true,
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get an item by id"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "404": {
+            "description": "Item not found"
+          },
+          "408": {
+            "description": "Request Timeout due to invalid token"
+          }
+        }
+      }
+    },
     "/items": {
       "post": {
         "tags": [
@@ -138,45 +177,6 @@
           },
           "400": {
             "description": "Bad Request"
-          }
-        }
-      }
-    },
-    "/items/{token}": {
-      "get": {
-        "tags": [
-          "Items"
-        ],
-        "summary": "Get an item entry by token",
-        "description": "Get an item by token",
-        "parameters": [
-          {
-            "name": "token",
-            "in": "header",
-            "required": true,
-            "type": "string",
-            "description": "token"
-          },
-          {
-            "name": "id",
-            "description": "Item id",
-            "required": true,
-            "in": "path",
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Get an item by id"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "404": {
-            "description": "Item not found"
-          },
-          "408": {
-            "description": "Request Timeout due to invalid token"
           }
         }
       }

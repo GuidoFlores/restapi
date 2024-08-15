@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const itemController = require('../controllers/itemController');
 
-router.get('/items/:', itemController.verifyToken)
+router.get('/items/', itemController.verifyToken)
 router.post('/items', itemController.createItem);
 router.get('/items', itemController.getAllItems);
 router.get('/items/:id', itemController.getItem);

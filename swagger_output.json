@@ -11,7 +11,7 @@
     "https"
   ],
   "paths": {
-    "/items/{}": {
+    "/items/": {
       "get": {
         "tags": [
           "Items"
@@ -19,12 +19,6 @@
         "summary": "Get an item entry by token",
         "description": "Get an item by token",
         "parameters": [
-          {
-            "name": "",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "id",
             "description": "Item id",

@@ -20,7 +20,7 @@
         "description": "Create an item",
         "parameters": [
           {
-            "name": "authorization",
+            "name": "token",
             "in": "header",
             "type": "string"
           },
@@ -55,7 +55,7 @@
         "description": "Get all items entries",
         "parameters": [
           {
-            "name": "authorization",
+            "name": "token",
             "in": "header",
             "type": "string"
           }
@@ -89,7 +89,7 @@
             "description": "Item id"
           },
           {
-            "name": "authorization",
+            "name": "token",
             "in": "header",
             "type": "string"
           }
@@ -124,7 +124,7 @@
             "description": ""
           },
           {
-            "name": "authorization",
+            "name": "token",
             "in": "header",
             "type": "string"
           },
@@ -166,7 +166,7 @@
             "description": ""
           },
           {
-            "name": "authorization",
+            "name": "token",
             "in": "header",
             "type": "string"
           }

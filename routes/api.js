@@ -6,14 +6,14 @@ const verifyToken = require('../middleware/verifyToken');
 
 router.use('/api', verifyToken);
 
-router.post('/items', itemController.createItem, verifyToken);
-router.get('/items', itemController.getAllItems,verifyToken);
-router.get('/items/:id', itemController.getItem,verifyToken);
+router.post('/items',verifyToken, itemController.createItem);
+router.get('/items', verifyToken, itemController.getAllItems);
+router.get('/items/:id', verifyToken, itemController.getItem);
 
 //
 
 
-router.put('/items/:id', itemController.updateItem,verifyToken);
-router.delete('/items/:id', itemController.deleteItem,verifyToken);
+router.put('/items/:id', verifyToken, itemController.updateItem);
+router.delete('/items/:id', verifyToken, itemController.deleteItem);
 
 module.exports = router;

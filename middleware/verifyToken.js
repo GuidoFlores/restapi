@@ -4,7 +4,7 @@ SECRET_KEY = 'shhhhhhhhh'
 // Middleware para verificar el token JWT
 const verifyToken = (req, res, next) => {
     // Obtener el token del encabezado de autorización
-    const token = req.headers['token'];
+    const token = req.headers['authorization'];
 
     // Verificar si el token existe
     if (!token) {

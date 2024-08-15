@@ -20,6 +20,11 @@
         "description": "Create an item",
         "parameters": [
           {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
             "name": "data",
             "in": "body",
             "description": "Data to create an item",
@@ -28,11 +33,6 @@
               "type": "object",
               "properties": {}
             }
-          },
-          {
-            "name": "token",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -55,7 +55,7 @@
         "description": "Get all items entries",
         "parameters": [
           {
-            "name": "token",
+            "name": "authorization",
             "in": "header",
             "type": "string"
           }
@@ -89,7 +89,7 @@
             "description": "Item id"
           },
           {
-            "name": "token",
+            "name": "authorization",
             "in": "header",
             "type": "string"
           }
@@ -124,6 +124,11 @@
             "description": ""
           },
           {
+            "name": "authorization",
+            "in": "header",
+            "type": "string"
+          },
+          {
             "name": "data",
             "in": "body",
             "description": "",
@@ -132,11 +137,6 @@
               "type": "object",
               "properties": {}
             }
-          },
-          {
-            "name": "token",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -166,7 +166,7 @@
             "description": ""
           },
           {
-            "name": "token",
+            "name": "authorization",
             "in": "header",
             "type": "string"
           }

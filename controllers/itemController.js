@@ -1,8 +1,6 @@
 const admin = require('firebase-admin');
  const db = admin.firestore();
 
- const jwt = require('jsonwebtoken');
-
 
 exports.getItem = async (req, res) => {
 
@@ -14,6 +12,7 @@ exports.getItem = async (req, res) => {
           description: 'Item id',
           required: true,
       }
+          
       #swagger.responses[404] = {
           description: 'Item not found',
       }
